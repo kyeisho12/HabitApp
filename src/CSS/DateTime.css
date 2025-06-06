@@ -1,55 +1,64 @@
-
 .datetime-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .time, .date {
-    padding: 2rem;
-    border-radius: 16px;
+    padding: 1.5rem;
+    border-radius: 20px;
     color: white;
-    flex: 1;  
+    flex: 1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease;
+}
+
+.time:hover, .date:hover {
+    transform: translateY(-5px);
 }
 
 .time {
-    background-color: #4176ff;
+    background: linear-gradient(135deg, #4176ff 0%, #3a67e0 100%);
     display: flex;
     flex-direction: column;
 }
 
 .time h2, .date h2 {
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
     margin: 0;
-    margin-bottom: 0.5rem;
-    opacity: 0.8;
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
 }
 
 .time p {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin: 0;
+    letter-spacing: -1px;
 }
 
 .time small {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-top: 0.5rem;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 0.75rem;
 }
 
 .date {
-    background-color: #8b3dff;
+    background: linear-gradient(135deg, #8b3dff 0%, #7a35e0 100%);
     display: flex;
     flex-direction: column;
 }
 
 .date p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
     margin: 0;
-    opacity: 0.8;
+    opacity: 0.9;
+    line-height: 1.6;
 }
 
 .calendar-header {

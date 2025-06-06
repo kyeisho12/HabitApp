@@ -1,47 +1,57 @@
 .status-container {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .status-card {
   flex: 1;
-  padding: 1.5rem;
-  border-radius: 16px;
+  padding: 2rem;
+  border-radius: 20px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
 }
 
 .total-habits {
-  background-color: #4176ff;
+  background: linear-gradient(135deg, #4176ff 0%, #3a67e0 100%);
 }
 
 .completed-habits {
-  background-color: #22c55e;
+  background: linear-gradient(135deg, #22c55e 0%, #1ca550 100%);
 }
 
 .completion-rate {
-  background-color: #8b3dff;
+  background: linear-gradient(135deg, #8b3dff 0%, #7a35e0 100%);
 }
 
 .status-card .icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
 .status-card h2 {
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   margin: 0;
-  opacity: 0.8;
-  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
 }
 
 .status-card .count {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
+  letter-spacing: -1px;
 }

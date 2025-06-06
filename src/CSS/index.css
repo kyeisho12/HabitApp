@@ -2,12 +2,18 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(to bottom right, 
+  rgba(17, 24, 39, 1),     
+  rgba(30, 58, 138, 1),    
+  rgba(88, 28, 135, 1)     
+);
 }
 
 .container {
@@ -19,7 +25,7 @@ body {
 
 .header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .header h1 {
