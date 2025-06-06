@@ -6,14 +6,27 @@ import Status from './components/Status';
 import HabitForm from "./components/HabitForm";
 
 function App() {
-  return (
-    <div className="container">
-      <Header />  
-      <DateTime/>
-      <Status/>
-      <HabitForm/>
-    </div>
-  );
+    const [totalHabits, setTotalHabits] = useState(0);
+    const [completedHabits, setCompletedHabits] = useState(0);
+    const [completionRate, setCompletionRate] = useState(0);
+
+    return (
+        <div className="container">
+            <Header />  
+            <DateTime/>
+            <Status 
+                totalHabits={totalHabits}
+                completedHabits={completedHabits}
+                completionRate={completionRate}
+            />
+            <HabitForm 
+                onHabitCountChange={setTotalHabits}
+                onCompletedCountChange={setCompletedHabits}
+                onCompletionRateChange={setCompletionRate}
+            />
+            
+        </div>
+    );
 }
 
 export default App;

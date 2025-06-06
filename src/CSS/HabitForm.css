@@ -1,7 +1,8 @@
 .habit-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .habit-form, .habit-window {
@@ -9,14 +10,22 @@
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    width: 50%;  
+    min-width: 300px; 
 }
+
 
 .habit-form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+}
+
+.habit-window {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
 }
 
 .habit-form h2 {
@@ -62,14 +71,6 @@
     background-color: #2563eb;
 }
 
-.habit-window {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 .habit-window h2 {
     color: #333;
     font-size: 1.1rem;
@@ -87,4 +88,104 @@
     font-size: 1.2rem;
     display: inline-flex;
     margin-bottom: 0.5rem;
+}
+
+.habits-header {
+    margin-bottom: 1.5rem;
+}
+
+.habits-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin: 0;
+}
+
+.habit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f8fafc;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.habit-item.completed {
+    background: linear-gradient(to right, #f0fdf4, #ecfdf5);
+}
+
+.habit-item.completed label {
+    color: #15803d;
+    text-decoration: line-through;
+}
+
+.completed-date {
+    font-size: 0.75rem;
+    color: #15803d;
+}
+
+.habit-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.habits-list {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.habit-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.habit-checkbox:checked {
+    background-color: #22c55e;
+    border-color: #22c55e;
+}
+
+.habit-content label {
+    font-size: 1rem;
+    color: #1e293b;
+}
+
+.habit-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.habit-date {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+}
+
+.completed-list {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.completed-list .habits-header h2 {
+    color: #15803d;
 }
