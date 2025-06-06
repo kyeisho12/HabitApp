@@ -1,0 +1,90 @@
+.habit-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.habit-form, .habit-window {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.habit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.habit-form h2 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.input-container input::placeholder {
+    color: #94a3b8;
+}
+
+.input-container button {
+    background-color: #4176ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.input-container button:hover {
+    background-color: #2563eb;
+}
+
+.habit-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.habit-window h2 {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.habit-window p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.icon {
+    font-size: 1.2rem;
+    display: inline-flex;
+    margin-bottom: 0.5rem;
+}

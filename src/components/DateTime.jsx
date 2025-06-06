@@ -42,7 +42,16 @@ export default function DateTime() {
 
     return (
         <div className="datetime-container">
-            
+            <div className="time">
+                <h2>Current Time</h2>
+                <p>{currentTime.toLocaleTimeString()}</p>
+                <small>{currentTime.toLocaleDateString('en-US', { 
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                })}</small>
+            </div>
            <div className="date">
                 <h2>{currentTime.toLocaleDateString('en-US', { 
                     month: 'long',

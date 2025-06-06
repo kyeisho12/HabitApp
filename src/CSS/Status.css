@@ -1,0 +1,47 @@
+.status-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.status-card {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.total-habits {
+  background-color: #4176ff;
+}
+
+.completed-habits {
+  background-color: #22c55e;
+}
+
+.completion-rate {
+  background-color: #8b3dff;
+}
+
+.status-card .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.status-card h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.status-card .count {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
