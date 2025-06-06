@@ -1,4 +1,4 @@
-import '../CSS/Status.css';
+import '../styles/Status.css';
 import React from 'react';
 
 export default function Status(props) {

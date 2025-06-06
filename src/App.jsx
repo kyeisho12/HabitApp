@@ -1,7 +1,7 @@
 import { useState } from "react";
-import './CSS/index.css';
+import './styles/DateTime.css';
 import Header from './components/header';  
-import DateTime from './components/DateTime';
+import DateTime from './components/DateTime/DateTime';
 import Status from './components/Status';
 import HabitForm from "./components/HabitForm";
 

@@ -1,4 +1,4 @@
-import "../CSS/HabitForm.css";
+import '../styles/HabitForm.css';
 import React from "react";
 
 export default function HabitForm(props) {
