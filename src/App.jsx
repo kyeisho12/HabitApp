@@ -6,9 +6,18 @@ import Status from './components/Status';
 import HabitForm from "./components/HabitForm";
 
 function App() {
-    const [totalHabits, setTotalHabits] = useState(0);
-    const [completedHabits, setCompletedHabits] = useState(0);
-    const [completionRate, setCompletionRate] = useState(0);
+    const [totalHabits, setTotalHabits] = useState(() => {
+        const saved = localStorage.getItem('habitStats');
+        return saved ? JSON.parse(saved).totalHabits : 0;
+    });
+    const [completedHabits, setCompletedHabits] = useState(() => {
+        const saved = localStorage.getItem('habitStats');
+        return saved ? JSON.parse(saved).totalHabits : 0;
+    });
+    const [completionRate, setCompletionRate] = useState(() => {
+        const saved = localStorage.getItem('habitStats');
+        return saved ? JSON.parse(saved).totalHabits : 0;
+    });
 
     return (
         <div className="container">

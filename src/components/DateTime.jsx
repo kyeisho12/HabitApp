@@ -52,7 +52,7 @@ export default function DateTime() {
                     day: 'numeric'
                 })}</small>
             </div>
-           <div className="date">
+        <div className="date">
                 <h2>{currentTime.toLocaleDateString('en-US', { 
                     month: 'long',
                     year: 'numeric'
