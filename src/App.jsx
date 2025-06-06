@@ -1,13 +1,13 @@
 import { useState } from "react";
 import './CSS/index.css';
+import Header from './components/header';  
+import DateTime from './components/DateTime';
 
 function App() {
   return (
     <div className="container">
-      <div className="header">
-        <h1>Daily Habit Tracker</h1>
-        <p>Build better habits, one day at a time</p>
-      </div>
+      <Header />  
+      <DateTime/>
     </div>
   );
 }
