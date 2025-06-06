@@ -2,71 +2,75 @@ import { useState, useEffect } from 'react';
 import '../CSS/DateTime.css';
 
 export default function DateTime() {
-    const [currentTime, setCurrentTime] = useState(new Date());
-    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const [date, setDate] = useState(new Date());
+    const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentTime(new Date());
+            setDate(new Date());
         }, 1000);
-
         return () => clearInterval(timer);
     }, []);
 
-    const generateCalendarDays = () => {
-        const year = currentTime.getFullYear();
-        const month = currentTime.getMonth();
-        const firstDay = new Date(year, month, 1).getDay();
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-        const days = [];
+    // Create calendar grid
+    const createCalendar = () => {
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const totalDays = new Date(year, month + 1, 0).getDate();
+        const startDay = new Date(year, month, 1).getDay();
+        
+        const calendarDays = [];
 
-        //not my codehajbfiajbf hirap nung logic kasi, pero it's basically to align the dates sa respective araw nila 
-        for (let i = 0; i < firstDay; i++) {
-            days.push(<div key={`empty-${i}`} className="calendar-day"></div>);
+        // Add empty spaces for days before the 1st
+        for (let i = 0; i < startDay; i++) {
+            calendarDays.push(
+                <div key={`empty-${i}`} className="calendar-day" />
+            );
         }
 
-        for (let day = 1; day <= daysInMonth; day++) {
-            const isToday = day === currentTime.getDate();
-            days.push(
+        // Add calendar dates
+        for (let day = 1; day <= totalDays; day++) {
+            calendarDays.push(
                 <div 
                     key={day} 
-                    className={`calendar-day ${isToday ? 'today' : ''}`}
+                    className={`calendar-day ${day === date.getDate() ? 'today' : ''}`}
                 >
                     {day}
                 </div>
             );
         }
 
-        return days;
+        return calendarDays;
     };
 
     return (
         <div className="datetime-container">
             <div className="time">
                 <h2>Current Time</h2>
-                <p>{currentTime.toLocaleTimeString()}</p>
-                <small>{currentTime.toLocaleDateString('en-US', { 
+                <p>{date.toLocaleTimeString()}</p>
+                <small>{date.toLocaleDateString('en-US', { 
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                 })}</small>
             </div>
-        <div className="date">
-                <h2>{currentTime.toLocaleDateString('en-US', { 
+
+
+            <div className="date">
+                <h2>{date.toLocaleDateString('en-US', { 
                     month: 'long',
                     year: 'numeric'
                 })}</h2>
                 <div className="calendar-grid">
-                    {daysOfWeek.map(day => (
+                    {weekDays.map(day => (
                         <div key={day} className="calendar-day day-header">
                             {day}
                         </div>
                     ))}
-                    {generateCalendarDays()}
+                    {createCalendar()}
                 </div>
             </div>
         </div>
-        
     );
-} 
+}
