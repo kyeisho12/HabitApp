@@ -4,6 +4,7 @@ import Header from './components/header';
 import DateTime from './components/DateTime/DateTime';
 import Status from './components/Status';
 import HabitForm from "./components/HabitForm";
+import AiGenerator from "./components/aiGenerator";
 
 function App() {
     const [totalHabits, setTotalHabits] = useState(() => {
@@ -33,7 +34,7 @@ function App() {
                 onCompletedCountChange={setCompletedHabits}
                 onCompletionRateChange={setCompletionRate}
             />
-            
+            <AiGenerator/>
         </div>
     );
 }

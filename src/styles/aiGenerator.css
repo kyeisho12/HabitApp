@@ -1,0 +1,40 @@
+.ai-container {
+  padding: 2rem;
+  width: 100%;
+}
+
+.ai-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ai-title {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ai-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.ai-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ai-button:hover {
+  background-color: #45a049;
+}
